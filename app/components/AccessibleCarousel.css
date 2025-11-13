@@ -1,0 +1,214 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #3a3a3a;
+}
+
+.carousel-controls {
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-rotation-control,
+.carousel-prev-button,
+.carousel-next-button {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  transition: background-color 0.2s, border-color 0.2s;
+  padding: 0;
+  line-height: 1;
+}
+
+.carousel-rotation-control {
+  position: absolute;
+  top: 8;
+  left: 8;
+  z-index: 10;
+}
+
+carousel-prev-button {
+  top: 50%;
+  position: absolute;
+}
+
+.carousel-next-button {
+  position: absolute;
+  top: 50%;
+}
+
+.carousel-rotation-control:hover,
+.carousel-prev-button:hover,
+.carousel-next-button:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.carousel-rotation-control:focus,
+.carousel-prev-button:focus,
+.carousel-next-button:focus {
+  outline: 3px solid #005fcc;
+  outline-offset: 2px;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.carousel-rotation-control:active,
+.carousel-prev-button:active,
+.carousel-next-button:active {
+  background: rgba(0, 0, 0, 1);
+}
+
+.carousel-prev-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  z-index: 10;
+}
+
+.carousel-next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  z-index: 10;
+}
+
+.carousel-items {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-slide-wrapper {
+  outline: none;
+}
+
+.carousel-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-image-container {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.carousel-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  color: #fff;
+}
+
+.carousel-description {
+  font-size: 16px;
+  margin: 0;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.carousel-items .slick-list {
+  overflow: hidden;
+}
+
+.carousel-items .slick-track {
+  display: flex;
+}
+
+.carousel-items .slick-slide {
+  height: auto;
+}
+
+.carousel-items .slick-slide > div {
+  height: 100%;
+}
+
+.carousel-items .slick-slide[aria-hidden="true"] {
+  visibility: hidden;
+}
+
+.carousel-item:focus {
+  outline: 3px solid #005fcc;
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (max-width: 768px) {
+  .carousel-image-container {
+    height: 300px;
+  }
+
+  .carousel-controls {
+    top: 10px;
+    left: 10px;
+  }
+
+  .carousel-prev-button,
+  .carousel-next-button {
+    left: 10px;
+  }
+
+  .carousel-next-button {
+    left: auto;
+    right: 10px;
+  }
+
+  .carousel-caption {
+    padding: 15px;
+  }
+
+  .carousel-title {
+    font-size: 20px;
+  }
+
+  .carousel-description {
+    font-size: 14px;
+  }
+}
+
