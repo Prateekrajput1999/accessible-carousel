@@ -17,6 +17,7 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
+    "@netlify/next": "^1.4.9",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
