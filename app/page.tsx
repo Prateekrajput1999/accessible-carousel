@@ -1,3 +1,5 @@
+"use client";
+
 import AccessibleCarousel from "./components/AccessibleCarousel";
 
 const slides = [
